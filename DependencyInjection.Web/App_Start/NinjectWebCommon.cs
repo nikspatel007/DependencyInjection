@@ -78,7 +78,7 @@ namespace DependencyInjection.Web.App_Start
                 .When(x => "diagnose".Equals(ConfigurationManager.AppSettings["EventType"], StringComparison.InvariantCultureIgnoreCase));
 
             kernel.Bind<IEvent>()
-                .To<Diagnose>()
+                .To<Register>()
                 .When(x => "register".Equals(ConfigurationManager.AppSettings["EventType"] , StringComparison.InvariantCultureIgnoreCase));
         }        
     }

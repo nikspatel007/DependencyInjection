@@ -268,7 +268,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DependencyInjection\DependencyInjection.csproj">
+    <ProjectReference Include="..\DependencyInjection\DependencyInjection.csproj">
       <Project>{0c1f51f8-5a28-4c87-a4cd-df93ded4f1c8}</Project>
       <Name>DependencyInjection</Name>
     </ProjectReference>

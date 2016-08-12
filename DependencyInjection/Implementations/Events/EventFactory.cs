@@ -20,7 +20,7 @@ namespace DependencyInjection.Implementations.Events
         /// <returns></returns>
         public IEvent CreateEvent()
         {
-            var config = _configProvider.Get("EventType");
+            var config = _configProvider.Get("EventTypeFactory");
             var dictionary = new Dictionary<int, string>();
             switch (config.ToLower())
             {

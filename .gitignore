@@ -3,3 +3,4 @@ packages/*
 */obj/*
 */.vs/*
 packages/
+.vs/

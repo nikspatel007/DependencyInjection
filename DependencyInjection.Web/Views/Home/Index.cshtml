@@ -48,7 +48,13 @@
 </div>
 
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-6">
+        @{
+            Html.RenderAction("FactoryCounts", "Home");
+
+        }
+    </div>
+    <div class="col-md-6">
         @{
             Html.RenderAction("Counts", "Home");
 

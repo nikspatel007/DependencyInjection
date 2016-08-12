@@ -25,15 +25,15 @@ namespace DependencyInjection.Web.Controllers
             return View();
         }
 
-        //[HttpGet]
-        //public ActionResult Counts(int start = 1, int end = 100)
-        //{
-        //    var records = _generator.Generate(start, end);
-        //    return PartialView("_Counts", records);
-        //}
-
         [HttpGet]
         public ActionResult Counts(int start = 1, int end = 100)
+        {
+            var records = _generator.Generate(start, end);
+            return PartialView("_Counts", records);
+        }
+
+        [HttpGet]
+        public ActionResult FactoryCounts(int start = 1, int end = 100)
         {
             var factory = new EventFactory(_configProvider);
             IGenerator generator = new Generator(factory.CreateEvent());
