@@ -1,0 +1,22 @@
+﻿@model System.Collections.Generic.List<DependencyInjection.Models.Numbers>
+
+
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var number in Model)
+        {
+            <tr>
+                <th scope="row">@number.Value</th>
+                <td>@number.Result</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

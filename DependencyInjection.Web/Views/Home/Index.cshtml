@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Number Generator</h1>
+    <p class="lead">Write a program that takes in an event type of either “Register” or “Diagnose” and prints the output specified in the rules below.</p>
+    <p>
+        <a href="https://github.com/nikspatel007/DependencyInjection" class="btn btn-primary btn-lg">Source Code &raquo;</a>
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Event type = “Register”</h2>
+        <p>
+            Print the numbers from one to one hundred except in the following cases:
+        </p>
+        <ul>
+            <li>
+                For multiples of three print “Register” instead of the number
+            </li>
+            <li>
+                For the multiples of five print “Patient” instead of the number
+            </li>
+            <li>
+                For numbers which are multiples of both three and five print “Register Patient” instead of the number
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+        <h2>Event type = “Diagnose”</h2>
+        <p>
+            Print the numbers from one to one hundred except in the following cases:
+        </p>
+        <ul>
+            <li>
+                For multiples of two print “Diagnose” instead of the number
+            </li>
+            <li>
+                For the multiples of seven print “Patient” instead of the number
+            </li>
+            <li>
+                For numbers which are multiples of both two and seven print “Diagnose Patient” instead of the number
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        @{
+            Html.RenderAction("Counts", "Home");
+
+        }
+    </div>
+</div>
